@@ -1,26 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*:root{
+  --secondary-black: #000000;
+
+  --primary-black: #101010;
+
+  --orange-color:#D87D4A;
+
+  --light-ornge:#FBAF85;
+
+  --dark-gray:#F1F1F1;
+
+  --light-gray:#FAFAFA;
+
+  --white-color:#FFFFFF;
+
+  /* font family fallback*/
+
+    --font-manrope: 'Manrope', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+   /* Font */
+
+   --h2: 3.5rem;
+   --h3: 1.75rem;
+   --h4: 2rem
+   --font-semi: 2.5rem;
+   
+
+   --max-width: 69.375rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* general */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+/* Apply Manrope to all elements */
+* {
+  font-family: var(--font-manrope);
 }
 
+/* Optional: Ensure specific elements use Manrope */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope);
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select, label {
+  font-family: var(--font-manrope);
+}
+
+
+/* Link styles */
+
+
+.seeProductDark{
+  background-color: var(--secondary-black);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  
+}
+
+.seeProductDark:hover {
+  background-color: var(--white-color);
+  color: #4C4C4C;
+}
+
+
+.seeProductOrange{
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+ 
+}
+
+.seeProductOrange:hover {
+  background-color: var(--light-ornge);
+  color: var(--white-color);
+}
+
+
+.seeProductWhite{
+  background-color: var(--white-color);
+  color: var(--primary-black);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--primary-black);
+}
+
+.seeProductWhite:hover {
+  background-color: var(--primary-black);
+  color: var(--white-color);
+  border: none;
+}
+
+
+.seeProductGray{
+  background-color: var(--dark-gray);
+  color: var(--primary-black);
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 1px solid var(--primary-black);
+}
+
+.seeProductGray:hover {
+  background-color: var(--primary-black);
+  color: var(--white-color);
+  border: none;
 }

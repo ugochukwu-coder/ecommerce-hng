@@ -1,0 +1,374 @@
+.heroSection {
+  width: 100%;
+  background-color: var(--primary-black);
+  color: var(--white-color);
+  position: relative;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-top: 1px solid var(--dark-gray);
+}
+
+.heroDetails {
+  width: 50%;
+}
+
+
+
+.title {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.productName {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  line-height: 1;
+  width: fit-content; 
+}
+
+.description {
+  font-size: 0.9375rem;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+  width: fit-content; 
+  max-width: 35rem; 
+}
+
+
+
+.heroImage {
+  width: 40.3rem;
+  position: relative;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+}
+
+/* ===== Mobile: 786px and below ===== */
+@media (max-width: 1067px) {
+  .heroContent {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 600px; /* Set a fixed height for the image container */
+    position: relative;
+  }
+
+  .productImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container */
+  }
+
+  .heroDetails {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+    max-width: 35rem;
+    padding: 2rem;
+  }
+
+  .productName {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .description {
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* speaker section */
+.speakerSection {
+  width: 100%;
+  margin-bottom: 3rem;
+  
+}
+
+.speakerContent{
+  width: 100%;
+  max-width: var(--max-width);
+  background-image: url('/audiobg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white-color);
+  margin: 0 auto;
+  display: flex;
+  justify-content:center;
+  align-items: start;
+  padding-top: 4rem;
+}
+
+.speakerDetails{
+width: 50%;
+}
+
+.heroSpeaker{
+  width: 50%;
+  height: auto;
+
+}
+
+.speakerImage{
+  width: 25.639rem;
+  height: 30.812rem;
+  
+}
+
+.speakerText{
+  width: 21rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+}
+
+.speakerHeading{
+  font-size:var(--h2);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.speakerDescription{
+  font-size: 0.9375rem;
+  color: var(--gray-color);
+  margin-bottom: 1.5rem;
+}
+
+
+/* Add this to your existing CSS */
+@media (max-width: 850px) {
+  .speakerSection{
+    padding: 0 2rem;
+  }
+  .speakerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    background-size: cover; /* This will cover the entire section */
+    min-height: 720px; /* Optional: set a minimum height */
+  }
+  
+  .heroSpeaker, .speakerDetails {
+    width: 100%;
+  }
+  
+  .speakerImage {
+    width: 13.937rem;
+    height: 16.812rem;
+  }
+  
+ .speakerText{
+    width: 21rem;
+    padding-top: 4rem;
+    align-items: center;
+  }
+
+  .seeProduct{
+    margin: 3rem;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+  .speakerImage {
+    width: 11.937rem;
+    height: 14.812rem;
+  }
+
+  .speakerHeading {
+    font-size: 2.5rem;
+  }
+}
+
+
+/* speaker stand */
+.speakerSectionTwo{
+  width: 100%;
+  
+}
+
+.speakerSectionWrapper{
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.speakerStand{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background-image: url('/speaker-stand.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:start;
+  padding: 6rem 2rem;
+}
+
+.inner{
+  margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:start;
+ 
+}
+
+.standRight{
+  background-image: url('/plan-home.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: start;
+  padding-left: 4rem;
+}
+
+.speakerImageTwo{
+  width: 100%;
+  max-width: --max-width;
+  height: 20rem;
+}
+
+.speakerTitle{
+  font-size:var(--h3);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.bluetoothPart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.standRight,
+.bluetoothImage{
+  width: 33.75rem ;
+  height: 20rem;
+}
+
+
+
+
+
+@media(max-width: 1091px){
+  .standRight,
+  .bluetoothImage{
+  width: 30rem ;
+  height: 20rem;
+}
+
+}
+
+@media(max-width: 950px){
+  .standRight,
+  .bluetoothImage{
+  width: 25rem ;
+  height: 20rem;
+}
+
+}
+
+@media(max-width: 900px){
+
+  .speakerSectionWrapper{
+    margin: 6rem 2rem;
+  }
+
+   .inner{
+    margin-left: 5px;
+    
+  }
+
+.standRight,
+.bluetoothImage{
+  width: 22rem ;
+  height: 15rem;
+}
+
+}
+
+@media(max-width: 780px){
+  .standRight,
+  .bluetoothImage{
+  width: 20rem ;
+  height: 15rem;
+}
+
+}
+
+@media(max-width: 720px){
+  .standRight,
+  .bluetoothImage{
+  width: 18rem ;
+  height: 15rem;
+}
+
+}
+
+
+
+@media(max-width: 650px){
+    .bluetoothPart{
+    flex-direction: column;
+  }
+
+  .speakerSectionWrapper{
+    margin: 0 2rem;
+  }
+
+    .inner{
+    margin-left: 0;
+    
+  }
+
+ 
+
+  
+.standRight,
+.bluetoothImage{
+  max-width: 33.75rem ;
+  width: 100% ;
+  height: 20rem;
+  margin-bottom: 2rem;
+}
+
+}
+
+
+
+

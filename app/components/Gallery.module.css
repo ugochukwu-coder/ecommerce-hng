@@ -1,0 +1,124 @@
+.container{
+  width: 100%;
+  margin-bottom: 7.5rem;
+}
+
+.imageContainer{
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1; 
+}
+
+.smallImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 17rem; 
+  flex: 1;
+}
+
+.largeImageWrapper {
+  position: relative;
+  flex: 1; 
+  height: 37rem; 
+}
+
+.imageSm{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.imageBg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.container{
+  width: 100%;
+  margin-bottom: 7.5rem;
+}
+
+.imageContainer{
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+}
+
+.smallImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 17rem; /* Fixed height for desktop */
+  flex: 1;
+}
+
+.largeImageWrapper {
+  position: relative;
+  flex: 1;
+  height: 37rem; /* Height for desktop */
+}
+
+.imageSm, .imageBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Mobile Styles - FIXED */
+@media (max-width: 768px) {
+  .imageContainer {
+    flex-direction: column;
+    gap: 1rem; 
+    padding: 0 2rem;
+  }
+  
+  .gallery {
+    gap: 1rem; /* Reduce gap between small images */
+  }
+  
+  .smallImageWrapper {
+    height: 15rem; /* Set explicit height for mobile */
+    min-height: 15rem; /* Ensure minimum height */
+  }
+  
+  .largeImageWrapper {
+    height: 20rem; /* Set explicit height for mobile */
+    min-height: 20rem; /* Ensure minimum height */
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .smallImageWrapper {
+    height: 12rem;
+    min-height: 12rem;
+  }
+  
+  .largeImageWrapper {
+    height: 18rem;
+    min-height: 18rem;
+  }
+}

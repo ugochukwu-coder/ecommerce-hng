@@ -1,0 +1,93 @@
+.audioGearSection {
+  width: 100%;
+  margin: 8rem 0;
+}
+
+.audioGearContainer {
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem; /* keeps same left-right spacing as other sections */
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.audioGearContent {
+  width: 26rem;
+  text-align: left;
+  padding: 0.625em;
+}
+
+.audioGearHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.audioGearHeading span {
+  color: var(--orange-color);
+}
+
+.audioGearDescription {
+  margin: 2rem 0;
+}
+
+.audioGearImage {
+  display: block;
+  width: 33.75rem;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 1120px) {
+  .audioGearImage {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .audioGearSection {
+    margin: 6rem 0;
+  }
+
+  .audioGearImage {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .audioGearSection {
+  margin: 3rem 0;
+}
+
+  .audioGearContainer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .audioGearContent {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .audioGearImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .audioGearHeading {
+    font-size: 1.8rem;
+  }
+
+  .audioGearDescription {
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+  }
+}

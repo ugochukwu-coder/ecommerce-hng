@@ -1,0 +1,129 @@
+.productsAccesseries {
+  position: relative;
+  display: grid;
+  width: 100% ;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 7.5em auto 7.5em auto;
+}
+
+.productItem {
+  position: relative; /* Add this for absolute positioning context */
+  width: 21.875rem;
+  height: 12.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--light-gray);
+  padding-top: 80px; /* Add space for the overlapping image */
+}
+
+
+.productName {
+  font-size: 1.125rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: var(--primary-black); /* Add color for better visibility on dark background */
+}
+
+.productImage {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7.684rem;
+  height: 8.75rem;
+  border-radius: 4px;
+  background-color: transparent;
+  mix-blend-mode: dark; /* Removes light backgrounds */
+}
+
+
+.shopButton {
+  color: var(--secondary-black);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+
+}
+
+.shopButton:hover {
+  color: var(--orange-color); /* Add hover effect */
+}
+
+.arrow{
+  color: var(--orange-color);
+}
+
+
+/* Tablet styles - MUST come AFTER default styles */
+@media (max-width: 1120px) {
+  .productsAccesseries {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .productItem {
+    position: relative;
+    width: 11rem;
+    height: 8.3125rem;
+    padding: 0.5rem;
+    padding-top: 4rem;
+  }
+
+  .productImage {
+    position: absolute;
+    width: 8rem;
+    height: 7rem;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .productName {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Mobile: 700px and below - Single column with original sizes */
+@media (max-width: 700px) {
+  .productsAccesseries {
+    grid-template-columns: 1fr; 
+    width: 100%; 
+    padding: 2rem; 
+    gap: 2rem; 
+  }
+
+  .productItem {
+    width: 21rem; 
+    height: 12.75rem; 
+    padding: 1rem; 
+    padding-top: 80px; 
+    margin: 2rem auto; 
+  }
+
+  .productImage {
+    width: 7.684rem; 
+    height: 8.75rem; 
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .productName {
+    font-size: 1.125rem; 
+    margin: 1rem 0; 
+  }
+}
+
+
+
+
+
+
+

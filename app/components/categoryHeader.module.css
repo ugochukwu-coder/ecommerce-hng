@@ -1,0 +1,22 @@
+.header{
+  width: 100%;
+  background-color: var(--primary-black);
+  margin-bottom: 5rem;
+
+}
+
+.headphones{
+  max-width:69.364rem ;
+  width:100% ;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-top: 1px solid var(--dark-gray);
+}
+
+.heading{
+  color: var(--white-color);
+  font-size: 2.5rem;
+}

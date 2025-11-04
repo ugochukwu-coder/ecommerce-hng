@@ -1,0 +1,169 @@
+.footerNav {
+  width: 100%;
+  height: 6.062rem;
+  background-color: var(--secondary-black);
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.footerRow {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 69.364rem;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2.125rem;
+  font-weight: bold;
+}
+
+
+
+.footerLogo {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  
+}
+
+
+
+.footerLinks li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--white-color);
+  font-size: 0.75rem;
+}
+
+.footerLinks li a:hover {
+  color: var(--orange-color);
+}
+
+.contact{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 69.364rem;
+  margin: 0 auto;
+  padding: 2em;
+  color: var(--white-color);
+}
+
+.socials{
+  width: 33.75rem;
+}
+
+.footerAbout{
+  margin-bottom: 3.5em;
+}
+
+/* social contact */
+.footer{
+  background-color: var(--secondary-black);
+}
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.socialIcons a {
+  color: var(--white-color); /* Using your white variable */
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--orange-color); /* #D87D4A on hover */
+}
+
+@media(max-width:800px){
+  .footerRow{
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footerLogo{
+    margin-bottom: 2rem;
+  }
+
+  .socials{
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .socialIcons{
+    align-self: flex-end;
+  }
+
+  .footerAbout{
+     margin-top: 2rem;
+  }
+
+}
+
+@media(max-width: 500px){
+  .footerNav{
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  
+  }
+  .footerRow{
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    height: 10px;
+  }
+
+    .contact{
+    align-items: center;
+  }
+
+  .socials{
+    width: 100%;
+    margin: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+   .footerLinks{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+ .socialIcons{
+    align-self:center;
+  }
+
+  .footerAbout{
+  margin-bottom: 2em;
+}
+
+}

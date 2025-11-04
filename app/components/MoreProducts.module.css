@@ -1,0 +1,135 @@
+.moreProducts {
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+.products {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.heading {
+  font-size: var(--h3);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.subWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.2;
+  background-color: var(--dark-gray);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.imageDefault,
+.imageOne,
+.imageTwo,
+.imageThree {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+}
+
+.seeProductOrange {
+  display: inline-block;
+  background-color: var(--orange-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: background-color 0.3s;
+}
+
+.seeProductOrange:hover {
+  background-color: #fbaf85;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) and (min-width: 769px) {
+  .imageContainer {
+    gap: 0.75rem;
+  }
+  
+  .subWrapper {
+    aspect-ratio: 1 / 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .imageDefault,
+  .imageOne,
+  .imageTwo,
+  .imageThree {
+    width: 45%;
+  }
+  
+  .title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  
+  .seeProductOrange {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .subWrapper {
+    aspect-ratio: 1 / 1;
+    margin-bottom: 2rem;
+  }
+  
+  .imageDefault,
+  .imageOne,
+  .imageTwo,
+  .imageThree {
+    width: 60%;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .seeProductOrange {
+    padding: 1rem 2rem;
+    font-size: 0.875rem;
+  }
+}
