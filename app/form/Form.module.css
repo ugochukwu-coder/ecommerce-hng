@@ -1,0 +1,150 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.formDetails {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.formDetails h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.form{
+  max-width: 730px;
+}
+
+.paragraph {
+  font-weight: bold;
+  color: var(--orange-color);
+  margin-bottom: 1rem;
+}
+
+.billDetails{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+ 
+}
+
+.shipping{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.billDetails,
+.shipping,
+.payment {
+  margin-bottom: 2rem;
+}
+
+.label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Input Styles */
+.formInput {
+  width: 18.75rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: yellow;
+  box-shadow: 0 0 0 2px rgba(255, 255, 0, 0.2);
+}
+
+/* Payment Options - Border surrounds the entire option */
+.paymentOption {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #ccc; /* This border surrounds the entire option */
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.paymentOption:hover {
+  border-color: #999;
+}
+
+/* Hide the default radio button */
+.radioInput {
+  margin-right: 1rem;
+  width: 1rem;
+  height: 1rem;
+}
+
+.radioLabel {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.optionTitle {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.optionDescription {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.inputField label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .formInput {
+    width: 100%;
+  }
+  
+  .inputGroup {
+    grid-template-columns: 1fr;
+  }
+  
+  .paymentOption {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .paymentOption label {
+    margin-top: 0.5rem;
+  }
+}

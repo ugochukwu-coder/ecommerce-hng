@@ -36,6 +36,7 @@ export default function ProductSection({
   const containerClass = layout === 'right' ? styles.containerTwo : styles.containerOne;
 
   return (
+    <>
     <section className={`${styles.wrapper} ${className}`}>
       <div className={containerClass}>
         <div className={styles.imageContainer}>
@@ -56,30 +57,25 @@ export default function ProductSection({
             {description}
           </p>
           
-          {/* Price and Quantity Section - Only show if price or quantity exists */}
-          {(price !== undefined || quantity !== undefined) && (
+          {/* Price Section */}
+          {price !== undefined && (
             <div className={styles.priceQuantity}>
-              {price !== undefined && (
-                <p className={styles.price}>${price.toFixed(2)}</p>
-              )}
-              
-              {quantity !== undefined && (
-                <div className={styles.buttonGroup}>
-                  <span className={styles.quantity}>{quantity}</span>
-                </div>
-              )}
+              <p className={styles.price}>${price.toFixed(2)}</p>
             </div>
           )}
           
-          {/* Button/Link Section - Always show if productLink or onAddToCart exists */}
+          {/* Button/Link Section with Quantity */}
           <div className={styles.buttonGroup}>
-            {variant === 'cart' && onAddToCart ? (
-              <button 
-                onClick={onAddToCart} 
-                className="seeProductOrange"
-              >
-                Add to Cart
-              </button>
+            {variant === 'cart' ? (
+              <div className={styles.quantityButtonRow}>
+                <p className={styles.quantity}>{quantity}</p>
+                <button 
+                  onClick={onAddToCart} 
+                  className="seeProductOrange"
+                >
+                  Add to Cart
+                </button>
+              </div>
             ) : (
               productLink && (
                 <Link href={productLink} className="seeProductOrange">
@@ -90,6 +86,68 @@ export default function ProductSection({
           </div>
         </div>
       </div>
+
+
+      <div className={styles.cartContainer}>
+        <div className={styles.heading}>
+          <h3 className={styles.cartHeading}>CART <span className={styles.headingSpan}>1</span></h3>
+          <button className={styles.remove}>remove all</button>
+        </div>
+        <div className={styles.cartHolder}>
+          <div className={styles.cartWrapper}>
+            <div className={styles.imgCont}>
+              <Image
+                src="/markI.png"
+                alt="XX99 SPEAKER"
+                width={300}
+                height={300}
+                className={styles.cartImage}
+              />
+            </div>
+            <div className={styles.cartTitleWrap}>
+              <p className={styles.cartTitle}>XX99 MARK II</p>
+              <p className={styles.cartPrice}>$2,222</p>
+            </div>
+          </div>
+          <div className={styles.cartButton}>
+            <button className="cartMinus">-</button>
+            <span className="cartQuantity">1</span>
+            <button className="cartPlus">+</button>
+          </div>
+        </div>
+
+           <div className={styles.cartHolder}>
+          <div className={styles.cartWrapper}>
+            <div className={styles.imgCont}>
+              <Image
+                src="/markI.png"
+                alt="XX99 SPEAKER"
+                width={300}
+                height={300}
+                className={styles.cartImage}
+              />
+            </div>
+            <div className={styles.cartTitleWrap}>
+              <p className={styles.cartTitle}>XX99 MARK II</p>
+              <p className={styles.cartPrice}>$2,222</p>
+            </div>
+          </div>
+          <div className={styles.cartButton}>
+            <button className="cartMinus">-</button>
+            <span className="cartQuantity">1</span>
+            <button className="cartPlus">+</button>
+          </div>
+        </div>
+
+        <div className={styles.totalUnit}>
+          <p className={styles.total}>TOTAL</p>
+          <p className={styles.totalPrice}>$2,222</p>
+        </div>
+        <button className={styles.btn}>CHECKOUT</button>
+      </div>
+      
     </section>
+  
+    </>
   );
 }

@@ -15,17 +15,17 @@ export default function Speakers(){
       productName: "ZX9",
       productType: "SPEAKER",
       description: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
-      productLink: "/spk/spk",
+      productLink: "speakers/speakerone",
       layout: 'left' as const
     },
     {
       imageSrc: "/ZX7speaker.png",
       altText: "ZX7speaker.png",
       isNewProduct: true,
-      productName: "XX99 MARK II",
+      productName: "ZX7",
       productType: "SPEAKER",
       description: "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
-      productLink: "skl/fk",
+      productLink: "speakers/speakertwo",
       layout: 'right' as const
     }
 

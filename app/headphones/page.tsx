@@ -15,7 +15,7 @@ export default function Headphones(){
       productName: "XX99 MARK II",
       productType: "HEADPHONES",
       description: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
-      productLink: "/headphones/headphonesone",
+      productLink: "/headphones/headphoneone",
       layout: 'left' as const
     },
     {
@@ -25,7 +25,7 @@ export default function Headphones(){
       productName: "XX99 MARK I",
       productType: "HEADPHONES",
       description: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
-      productLink: "yyyyy",
+      productLink: "headphones/headphonetwo",
       layout: 'right' as const
     },
     {
@@ -35,7 +35,7 @@ export default function Headphones(){
       productName: "XX59",
       productType: "HEADPHONES",
       description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
-      productLink: "/products/xx59",
+      productLink: "headphones/headphonethree",
       layout: 'left' as const
     }
   ];

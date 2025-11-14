@@ -5,19 +5,20 @@ import MoreProducts from '@/app/components/MoreProducts';
 import Features from "@/app/components/Features";
 import ProductPage from "@/app/components/ProductPage";
 
-export default function HeadphonesPage() {
+export default function HeadphoneOne() {
 
   const headphones = [
       {
       imageSrc: "/markII.png",
       altText: "XX99 Mark II Headphones",
       isNewProduct: true,
-      price: 899.99,
-      quantity: 22,
+      price: 2999,
+      quantity:1,
       productName: "XX99 MARK II",
       productType: "HEADPHONES",
       description: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
       productLink: "/products/xx99-mark-ii",
+      variant: "cart" as const,
       layout: 'left' as const
     }
   ]
@@ -41,7 +42,7 @@ export default function HeadphonesPage() {
   const smallImages = [
     {
       src: "/imageOne.png",
-      alt: "Person listening to music",
+      alt: "XX99 Mark II Headphones",
     },
     {
       src: "/imageTwo.png", 
@@ -59,23 +60,23 @@ export default function HeadphonesPage() {
     {
       id: "1",
       imageSrc: "/image-headphone-small.png",
-      altText: "XX99 Mark II Headphones",
-      name: "XX99 MARK II",
-      productLink: "/products/xx99-mark-ii",
+      altText: "XX99 Mark I Headphones",
+      name: "XX99 MARK I",
+      productLink: "/headphones/headphonetwo"
     },
     {
       id: "2", 
-      imageSrc: "/image-speaker-small.png",
+      imageSrc: "/XX59.png",
       altText: "XX59 Headphones",
       name: "XX59",
-      productLink: "/products/xx59",
+      productLink: "/headphones/headphonethree",
     },
     {
       id: "3",
-      imageSrc: "/image-xx99-mark-one-headphones.png",
+      imageSrc: "/image-speaker-small.png",
       altText: "ZX9 Speaker",
       name: "ZX9 SPEAKER", 
-      productLink: "/products/zx9-speaker",
+      productLink: "/speakers/speakerone",
     }
   ];
 
@@ -90,22 +91,24 @@ export default function HeadphonesPage() {
             ))}
 
        <Features
-      featuresDescription={featuresDescription}
-      boxItems={boxItems}
-    />
+          featuresDescription={featuresDescription}
+          boxItems={boxItems}
+        />
 
-      {/* Your page content */}
-      <MoreProducts 
-        title="YOU MAY ALSO LIKE"
-        products={relatedProducts}
-      />
-
-      {/* Gallery component */}
+          {/* Gallery component */}
       <Gallery 
         smallImages={smallImages}
         largeImage={largeImage}
         layout="left" 
       />
+
+      {/* page content */}
+      <MoreProducts 
+        title="YOU MAY ALSO LIKE"
+        products={relatedProducts}
+      />
+
+    
 
       <ProductsAccesseries />
       <AudioGear />

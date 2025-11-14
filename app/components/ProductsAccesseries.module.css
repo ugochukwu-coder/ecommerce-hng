@@ -1,7 +1,7 @@
 .productsAccesseries {
   position: relative;
   display: grid;
-  width: 100% ;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   padding: 2rem;
@@ -10,7 +10,7 @@
 }
 
 .productItem {
-  position: relative; /* Add this for absolute positioning context */
+  position: relative;
   width: 21.875rem;
   height: 12.75rem;
   text-align: center;
@@ -18,112 +18,163 @@
   padding: 1rem;
   border-radius: 8px;
   background-color: var(--light-gray);
-  padding-top: 80px; /* Add space for the overlapping image */
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.productName {
-  font-size: 1.125rem;
-  margin: 1rem 0;
-  font-weight: bold;
-  color: var(--primary-black); /* Add color for better visibility on dark background */
+.productItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.productImage {
+.productImageContainer {
   position: absolute;
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
   width: 7.684rem;
   height: 8.75rem;
-  border-radius: 4px;
-  background-color: transparent;
-  mix-blend-mode: dark; /* Removes light backgrounds */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.productImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.productName {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: var(--primary-black);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
 .shopButton {
   color: var(--secondary-black);
-  border: none;
-  cursor: pointer;
+  text-decoration: none;
   font-weight: bold;
-
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 }
 
 .shopButton:hover {
-  color: var(--orange-color); /* Add hover effect */
-}
-
-.arrow{
   color: var(--orange-color);
+  background-color: rgba(216, 125, 74, 0.1);
 }
 
+.arrow {
+  color: var(--orange-color);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
 
-/* Tablet styles - MUST come AFTER default styles */
+.shopButton:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Tablet styles */
 @media (max-width: 1120px) {
   .productsAccesseries {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     padding: 1.5rem;
+    margin: 5em auto 5em auto;
   }
 
   .productItem {
-    position: relative;
-    width: 11rem;
+    width: 100%;
+    max-width: 11rem;
     height: 8.3125rem;
     padding: 0.5rem;
     padding-top: 4rem;
   }
 
-  .productImage {
-    position: absolute;
+  .productImageContainer {
     width: 8rem;
     height: 7rem;
     top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .productName {
     font-size: 1rem;
-    margin: 0.5rem 0;
+    margin: 0.25rem 0;
+  }
+
+  .shopButton {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
-/* Mobile: 700px and below - Single column with original sizes */
+/* Mobile styles */
 @media (max-width: 700px) {
   .productsAccesseries {
-    grid-template-columns: 1fr; 
-    width: 100%; 
-    padding: 2rem; 
-    gap: 2rem; 
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 1rem;
+    gap: 4rem;
+    margin: 3em auto 3em auto;
   }
 
   .productItem {
-    width: 21rem; 
-    height: 12.75rem; 
-    padding: 1rem; 
-    padding-top: 80px; 
-    margin: 2rem auto; 
+    width: 100%;
+    max-width: 21rem;
+    height: 12.75rem;
+    padding: 1rem;
+    padding-top: 80px;
+    margin: 0 auto;
   }
 
-  .productImage {
-    width: 7.684rem; 
-    height: 8.75rem; 
+  .productImageContainer {
+    width: 7.684rem;
+    height: 8.75rem;
     top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .productName {
-    font-size: 1.125rem; 
-    margin: 1rem 0; 
+    font-size: 1.125rem;
+    margin: 0.5rem 0;
+  }
+
+  .shopButton {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
   }
 }
 
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .productsAccesseries {
+    padding: 0.5rem;
+    gap: 3rem;
+  }
 
+  .productItem {
+    max-width: 18rem;
+    height: 11rem;
+    padding-top: 70px;
+  }
 
-
-
-
-
+  .productImageContainer {
+    width: 6.5rem;
+    height: 7.5rem;
+    top: -50px;
+  }
+}

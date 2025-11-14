@@ -1,4 +1,4 @@
-import styles from "./ProductsAccesseries.module.css"; // This should work since the file exists
+import styles from "./ProductsAccesseries.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,23 +7,28 @@ const productsAccesseries = [
   {
     id: 1,
     image: "/image-headphone-small.png",
-    title: "Headphones"
+    title: "Headphones",
+    link: "/headphones" // Add proper links
   },
-  { id: 2,
-    image: "/image-speaker-small.png", // Fixed missing slash
-    title: "Speakers"
+  { 
+    id: 2,
+    image: "/image-speaker-small.png",
+    title: "Speakers",
+    link: "/speakers"
   },
-  { id:3,
+  { 
+    id: 3,
     image: "/image-xx99-mark-one-headphones.png",
-    title: "Earphones"
+    title: "Earphones",
+    link: "/earphones"
   }
-]
+];
 
 export default function ProductsAccesseries() {
   return (
     <div className={styles.productsAccesseries}>
-      {productsAccesseries.map((product, index) => (
-        <div key={index} className={styles.productItem}>
+      {productsAccesseries.map((product) => (
+        <div key={product.id} className={styles.productItem}>
           <div className={styles.productImageContainer}>
             <Image
               src={product.image}
@@ -34,11 +39,11 @@ export default function ProductsAccesseries() {
             />
           </div>
           <p className={styles.productName}>{product.title}</p>
-          <Link href="" className={styles.shopButton}>
+          <Link href={product.link} className={styles.shopButton}>
             SHOP <span className={styles.arrow}>&gt;</span>
           </Link>
         </div>
       ))}
     </div>
-  )
+  );
 }
